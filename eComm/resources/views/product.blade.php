@@ -7,6 +7,7 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -38,12 +39,12 @@
   <div class="trending-wrapper">
     <h3>Tredning Products</h3>
     @foreach($products as $item)
-    <div class="col-md-2 col-sm-6">
+    <div class="col-md-2 col-sm-6 card shadow-sm custom-card" style="width: 22rem;">
       <div class="trening-item">
-      <a href="detail/{{$item['id']}}">
-        <img class="trending-image" src="{{$item['gallery']}}">
-        <div class="">
-        <h3>{{$item['name']}}</h3>
+      <a href="detail/{{$item['id']}}" style="margin: 20px">
+        <img class="trending-image card-img-top" src="{{$item['gallery']}}">
+        <div class="card-body text-center">
+        <h3 class="card-title text-dark text-center">{{$item['name']}}</h3>
         </div>
       </a>
       </div>
@@ -53,3 +54,40 @@
 </div>
 </div>
 @endsection
+
+<style>
+  .custom-card {
+    border: none;
+    background: linear-gradient(135deg, #e3f2fd,#FFFFFF,#FFFFFF, #bbdefb);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 40px;
+    margin: 30px;
+  }
+
+  .custom-card:hover {
+    transform: scale(1.09);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #f8f9fa,#FFFFFF,#FFFFFF,#e3f2fd);
+  }
+
+  .trending-image {
+    object-fit: cover;
+    transition: opacity 0.3s;
+  }
+
+  .trending-image:hover {
+    opacity: 0.9;
+  }
+
+  /* .card-body {
+    width: 200px;
+  } */
+
+  .card-title {
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+</style>

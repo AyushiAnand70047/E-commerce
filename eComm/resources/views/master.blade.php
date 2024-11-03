@@ -15,7 +15,9 @@
 <style>
     .custom-login{
         height: 500px;
-        padding-top: 100px;
+    }
+    .custom-signup{
+        height: 500px;
     }
     img.slider-img{
         height: 400px !important

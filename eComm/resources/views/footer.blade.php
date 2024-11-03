@@ -14,21 +14,25 @@
       text-decoration: none;
     }
 
-    .social-icons a:hover {
+    .social-icons .facebook:hover {
       color: #007bff;
+    }
+
+    .social-icons .insta:hover {
+      color: crimson;
     }
   </style>
 </head>
 
 <body>
-  <div style="clear:both" class="panel panel-default">
+  <div style="clear:both; background-color: rgba(0, 0, 0, 0.05);" class="panel panel-default">
     <div class="panel-body text-center">
       <h4>Need Support? Reach out to us!</h4>
       <div class="social-icons">
-        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="facebook">
           <i class="fa fa-facebook-official fa-2x"></i>
         </a>
-        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram" class="insta">
           <i class="fa fa-instagram fa-2x"></i>
         </a>
       </div>
